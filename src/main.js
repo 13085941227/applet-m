@@ -7,7 +7,7 @@ App.mpType = 'app'
 import mpvueToastRegistry from 'mptoast/registry'
 mpvueToastRegistry(Vue)
 
-import request from './utils/requestMethod.js'
+import {request} from './utils/requestMethod.js'
 Vue.prototype.$request = request;
 
 const app = new Vue(App)

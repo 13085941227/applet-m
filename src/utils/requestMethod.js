@@ -1,11 +1,11 @@
 
-let serverPath = 'http://www.abc.com/api/'
-export function post(url, data) {
+let serverPath = 'https://eco.taobao.com'
+export function request(url,type, data) {
   return new Promise((resolve, reject) => {
     wx.request({
       url: serverPath + url, // 拼接完整的url
       data: data,
-      method: 'POST',
+      method: type,
       header: {
         'content-type': 'application/json'
       },
