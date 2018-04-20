@@ -1,6 +1,6 @@
 
 let serverPath = 'https://eco.taobao.com'
-export function request(url,type, data) {
+function request(url,type, data) {
   return new Promise((resolve, reject) => {
     wx.request({
       url: serverPath + url, // 拼接完整的url
@@ -17,4 +17,7 @@ export function request(url,type, data) {
       }
     })
   })
+}
+export async function wxRequest(url,type,data) {
+  return await request(url,type,data);
 }

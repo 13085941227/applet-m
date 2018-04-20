@@ -7,8 +7,8 @@ App.mpType = 'app'
 import mpvueToastRegistry from 'mptoast/registry'
 mpvueToastRegistry(Vue)
 
-import {request} from './utils/requestMethod.js'
-Vue.prototype.$request = request;
+import {wxRequest} from './utils/requestMethod.js'
+Vue.prototype.$request = wxRequest;
 
 const app = new Vue(App)
 app.$mount()
